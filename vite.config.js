@@ -10,7 +10,8 @@ export default defineConfig({
   plugins: [
     react(),
     replace({
-      'process.env': JSON.stringify(process.env),
+      // eslint-disable-next-line no-undef
+      'process.env.VITE_API_KEY': JSON.stringify(process.env.VITE_API_KEY),
     }),
   ],
   base: "/youtube/",

@@ -1,19 +1,23 @@
+/* eslint-disable react/no-unknown-property */
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react'
 import "./PlayVideo.css"
-import video1 from '../../assets/video.mp4'
+// import video1 from '../../assets/video.mp4'
 import like from '../../assets/like.png'
 import dislike from '../../assets/dislike.png'
 import share from '../../assets/share.png'
 import save from '../../assets/save.png'
-import jack from '../../assets/jack.png'
+// import jack from '../../assets/jack.png'
 import user_profile from '../../assets/user_profile.jpg'
 import { API_KEY, value_converter } from '../../data'
 import moment from 'moment'
 
+// eslint-disable-next-line react/prop-types
 const PlayVideo = ({videoId}) => {
 
     const[apiData,setApiData] =useState(null);
     const[channelData,setChannelData]=useState(null);
+    // eslint-disable-next-line no-unused-vars
     const[commentData,setCommentData]=useState([]);
 
     const fetchVideoData = async() =>{
@@ -34,10 +38,12 @@ const PlayVideo = ({videoId}) => {
     
     useEffect(()=>{
         fetchVideoData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     useEffect(()=>{
         fetchOtherData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[apiData])
 
   return (
